@@ -86,6 +86,30 @@ btn.addEventListener('click', () => {
         
         output.value = `${newFirstName} has ${newFirstName.length} characters`;
 
+    } else if (manyOptions.value === "middle-name"){
+
+    // Mission: find middle name's first and last index and actual middle name
+
+        // store user input in variable and trim potential spaces in the beginning
+
+        let fullName = userInput.value.trimStart();
+
+        // find index of the first white space
+
+         let firstCut = fullName.indexOf(' ') + 1; // where middle name begins
+
+         let middleNameBegin = fullName.slice(firstCut); // remove first name
+
+         
+         let secondCut = middleNameBegin.indexOf(' '); // where middle name ends
+
+         let middleName = middleNameBegin.slice(0, secondCut); // remove surname
+
+        
+        // make the middle name the output's value
+        
+        output.value = middleName;
+
 
     }
 })
