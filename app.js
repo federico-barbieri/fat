@@ -114,8 +114,6 @@ btn.addEventListener('click', () => {
 
         // Mission: If input is a filename: Check if a filename is .png or .jpg
 
-        // store user input in variable and trim potential spaces in the beginning
-
 
         let fullName = userInput.value.trimStart();
 
@@ -129,6 +127,31 @@ btn.addEventListener('click', () => {
 
         output.value = nameOfFile;
 
+
+    } else if (manyOptions.value === "password"){
+
+        // Mission: replace password for asteriscs
+
+        // remove whitespace
+
+        let password = userInput.value.trim();
+
+         // get password's length
+
+        let passwordLength = password.length;
+
+        let newPas = '';
+
+        // add an asterisc for every character
+
+        for (let i= 0; i < passwordLength; i++){
+
+            newPas += "*";
+        }
+
+  
+
+        output.value = newPas;
 
     }
 })
