@@ -110,6 +110,25 @@ btn.addEventListener('click', () => {
         
         output.value = middleName;
 
+    } else if(manyOptions.value === "filename"){
+
+        // Mission: If input is a filename: Check if a filename is .png or .jpg
+
+        // store user input in variable and trim potential spaces in the beginning
+
+
+        let fullName = userInput.value.trimStart();
+
+        let nameOfFile;
+
+        if (fullName.endsWith('.jpg')){
+            nameOfFile = "It's a jpg";
+        } else if(fullName.endsWith('.png')){
+            nameOfFile = "It's a png";
+        }
+
+        output.value = nameOfFile;
+
 
     }
 })
