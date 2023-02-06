@@ -66,6 +66,27 @@ btn.addEventListener('click', () => {
         
         output.value = newFirstName;
 
+    } else if (manyOptions.value === "first-name-length"){
+
+        // Mission: If input is a full name: Find the first name's length
+
+        // store user input in variable and trim potential spaces in the beginning
+
+        let fullName = userInput.value.trimStart();
+
+        // find index of the first white space
+
+         let cutHere = fullName.indexOf(' ');
+
+        // keep everything from the beginning until the whitespace
+
+         let newFirstName = fullName.substring(0, cutHere);       
+
+        // make the first name's length the output's value
+        
+        output.value = `${newFirstName} has ${newFirstName.length} characters`;
+
+
     }
 })
 
